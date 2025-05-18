@@ -2,9 +2,8 @@ This project seeks to create a diagnostic system based on deep learning for the 
 
 In healthcare, accuracy is not enough for an AI model; the decisions also need to be **interpretable** and **clinically transparent**. To tackle this, the project introduces a wide range of **XAI techniques** that visually and analytically justify how the model arrived at a specific prediction. These justifications play a pivotal role in establishing trust with doctors and allowing for safe deployment of AI in actual diagnostic environments.
 
----
 
-### ✅ **About Project Does**
+### ✅ **About Project**
 
 ---
 
@@ -16,7 +15,6 @@ Performs image resizing, normalization, and augmentation (rotations, shifts, zoo
 
 🧠 **Implements Multiple XAI Techniques to Explain Predictions**
 
----
 
 📌 **Grad-CAM (Gradient-weighted Class Activation Mapping)**
 *Highlights the spatial regions in an image that influenced the model’s decision the most.*
@@ -39,4 +37,3 @@ Performs image resizing, normalization, and augmentation (rotations, shifts, zoo
 📌 **Feature Map Visualization (Layer Outputs)**
 *Helps interpret how the network processes and transforms input images layer by layer, offering insight into what the model "sees" at different depths.*
 
----
