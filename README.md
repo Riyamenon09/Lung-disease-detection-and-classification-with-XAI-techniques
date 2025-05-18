@@ -2,6 +2,8 @@ This project seeks to create a diagnostic system based on deep learning for the 
 
 In healthcare, accuracy is not enough for an AI model; the decisions also need to be interpretable and clinically transparent. To tackle this, the project introduces a wide range of XAI techniques that visually and analytically justify how the model arrived at a specific prediction. These justifications play a pivotal role in establishing trust with doctors and allowing for safe deployment of AI in actual diagnostic environments.
 
+
+
 ✅**About Project Does**
 
 🔍 Classifies Lung Diseases Using VGG19
@@ -9,6 +11,7 @@ In healthcare, accuracy is not enough for an AI model; the decisions also need t
 
 🖼️ Processes and Augments X-ray Data
   Performs image resizing, normalization, and augmentation (rotations, shifts, zooms, flips) to improve model generalization and robustness.
+  
 
 🧠 **Implements Multiple XAI Techniques to Explain Predictions**
 
@@ -16,17 +19,21 @@ In healthcare, accuracy is not enough for an AI model; the decisions also need t
 
   * Highlights the spatial regions in an image that influenced the model’s decision the most.
 
+
 📌 **LIME (Local Interpretable Model-Agnostic Explanations)**
 
   * Explains individual predictions by approximating the model locally with an interpretable model (e.g., linear model).
+
 
 📌 **Integrated Gradients**
 
   * A gradient-based method that attributes a prediction to each input feature by integrating the gradients along the path from a baseline to the input.It produces precise pixel-level attribution maps, useful for identifying fine-grained visual cues that influenced the model.
 
+
 📌 **Layer-wise Relevance Propagation (LRP)**
 
   * Propagates the prediction backward through the network, distributing relevance scores to each neuron and input feature.
+    
 
 📌 **Decision Tree Interpretation**
 
@@ -34,6 +41,7 @@ In healthcare, accuracy is not enough for an AI model; the decisions also need t
 
     * as a surrogate to approximate CNN behavior in a human-readable format, or
     * to classify feature representations extracted from intermediate CNN layers.
+   
 
  📌 **Feature Map Visualization (Layer Outputs)**
 
