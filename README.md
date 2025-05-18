@@ -2,9 +2,9 @@ This project seeks to create a diagnostic system based on deep learning for the 
 
 In healthcare, accuracy is not enough for an AI model; the decisions also need to be interpretable and clinically transparent. To tackle this, the project introduces a wide range of XAI techniques that visually and analytically justify how the model arrived at a specific prediction. These justifications play a pivotal role in establishing trust with doctors and allowing for safe deployment of AI in actual diagnostic environments.
 
-## ✅About Project Does**
+✅About Project Does**
 
-🔍 **Classifies Lung Diseases Using VGG19**
+🔍 Classifies Lung Diseases Using VGG19
   Utilizes a pre-trained **VGG19** model, fine-tuned on chest X-ray images. The model outputs predictions for three classes: COVID-19, Pneumonia, and Normal.
 
 🖼️ **Processes and Augments X-ray Data**
