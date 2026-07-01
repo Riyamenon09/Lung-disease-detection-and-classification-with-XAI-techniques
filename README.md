@@ -1,39 +1,213 @@
-This project seeks to create a diagnostic system based on deep learning for the detection and classification of lung conditions from chest X-ray images, specifically for **COVID-19**, **Pneumonia**, and **Normal (healthy)** states. At the core of the classification framework is a **VGG19 Convolutional Neural Network** fine-tuned for its excellent performance in visual tasks.
+# 🫁 Lung Disease Detection and Classification using Deep Learning with Explainable AI (XAI)
 
-In healthcare, accuracy is not enough for an AI model; the decisions also need to be **interpretable** and **clinically transparent**. To tackle this, the project introduces a wide range of **XAI techniques** that visually and analytically justify how the model arrived at a specific prediction. These justifications play a pivotal role in establishing trust with doctors and allowing for safe deployment of AI in actual diagnostic environments.
-
-
-### ✅ **About Project**
+> A Deep Learning-based diagnostic system that classifies chest X-ray images into **COVID-19**, **Pneumonia**, and **Normal** categories using a fine-tuned **VGG19** model, integrated with multiple **Explainable AI (XAI)** techniques for transparent and trustworthy predictions.
 
 ---
 
-🔍 **Classifies Lung Diseases Using VGG19**
-Utilizes a pre-trained **VGG19** model, fine-tuned on chest X-ray images. The model outputs predictions for three classes: COVID-19, Pneumonia, and Normal.
+## 📖 Project Overview
 
-🖼️ **Processes and Augments X-ray Data**
-Performs image resizing, normalization, and augmentation (rotations, shifts, zooms, flips) to improve model generalization and robustness.
+Artificial Intelligence has become an essential tool in modern healthcare, especially in medical image analysis. However, achieving high classification accuracy alone is insufficient for real-world clinical adoption. Healthcare professionals need to understand **why** a model makes a particular prediction before trusting its recommendations.
 
-🧠 **Implements Multiple XAI Techniques to Explain Predictions**
+This project presents an intelligent diagnostic system that leverages a **VGG19 Convolutional Neural Network** to classify chest X-ray images into three categories:
+
+- 🦠 COVID-19
+- 🫁 Pneumonia
+- ✅ Normal
+
+To improve interpretability and clinical transparency, the model incorporates multiple **Explainable AI (XAI)** techniques that visually and analytically explain the reasoning behind each prediction. These explanations help bridge the gap between deep learning models and healthcare professionals, making AI-assisted diagnosis more reliable and trustworthy.
+
+---
+
+# 🚀 Features
+
+- ✅ Multi-class lung disease classification
+- ✅ Transfer Learning using VGG19
+- ✅ Chest X-ray preprocessing and augmentation
+- ✅ Fine-tuned CNN architecture
+- ✅ Multiple Explainable AI (XAI) techniques
+- ✅ Feature map visualization
+- ✅ Training & validation performance visualization
+- ✅ Clinically interpretable predictions
+
+---
+
+# 🧠 Model Architecture
+
+The classification model is based on **VGG19**, a deep Convolutional Neural Network pre-trained on ImageNet.
+
+### Transfer Learning Pipeline
+
+- Load pre-trained VGG19 weights
+- Freeze initial convolutional layers
+- Replace the original classifier with custom dense layers
+- Fine-tune the network on chest X-ray images
+- Use Softmax activation for three-class classification
+
+---
+
+# 📂 Dataset
+
+The dataset contains chest X-ray images divided into three categories.
+
+| Class | Description |
+|--------|-------------|
+| COVID-19 | Chest X-rays of COVID-19 infected patients |
+| Pneumonia | Chest X-rays showing Pneumonia |
+| Normal | Healthy chest X-rays |
+
+---
+
+# ⚙️ Data Preprocessing
+
+Before training, the dataset undergoes several preprocessing steps:
+
+- Image resizing
+- Pixel normalization
+- Data augmentation
+  - Rotation
+  - Horizontal Flip
+  - Zoom
+  - Width Shift
+  - Height Shift
+- Batch generation
+
+These preprocessing techniques improve model robustness and reduce overfitting.
+
+---
+
+# 🛠️ Tech Stack
+
+- Python
+- TensorFlow
+- Keras
+- VGG19
+- NumPy
+- Pandas
+- Matplotlib
+- OpenCV
+- Scikit-learn
+- LIME
+- Captum
+- Jupyter Notebook
+
+---
+
+# 🔍 Explainable AI (XAI) Techniques
+
+One of the key objectives of this project is to make deep learning predictions transparent and understandable. The following XAI methods were implemented.
+
+---
+
+## 📌 Grad-CAM
+
+Gradient-weighted Class Activation Mapping highlights the important regions of a chest X-ray that influenced the model's prediction.
+
+<p align="center">
+<img src="Images/grad_cam.png" width="650">
+</p>
+
+---
+
+## 📌 LIME (Local Interpretable Model-Agnostic Explanations)
+
+LIME explains an individual prediction by approximating the complex deep learning model with a locally interpretable surrogate model.
+
+<p align="center">
+<img src="Images/lime.png" width="650">
+</p>
+
+---
+
+## 📌 Integrated Gradients
+
+Integrated Gradients attribute prediction importance to every input pixel by integrating gradients from a baseline image to the input image.
+
+<p align="center">
+<img src="Images/integrated_gradient.png" width="650">
+</p>
+
+---
+
+## 📌 Layer-wise Relevance Propagation (LRP)
+
+LRP propagates the prediction backward through the network to identify which pixels contributed the most to the final prediction.
+
+<p align="center">
+<img src="Images/lrp_heatmap.png" width="650">
+</p>
+
+---
+
+## 📌 Feature Map Visualization
+
+Feature map visualization helps understand how different convolutional layers extract meaningful features from chest X-ray images.
+
+<p align="center">
+<img src="Images/feature_map.png" width="650">
+</p>
+
+---
+
+## 📌 Predicted Class
+
+Displays the final predicted disease category generated by the trained VGG19 model.
+
+<p align="center">
+<img src="Images/predicted_class.png" width="450">
+</p>
+
+---
+
+# 📊 Model Performance
+
+The model performance is evaluated using training and validation metrics.
+
+### Accuracy & Loss Curve
+
+<p align="center">
+<img src="Images/accuracy_loss.png" width="750">
+</p>
+
+---
+
+## 📈 Evaluation Metrics
+
+The model is evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
+
+---
+
+# 📁 Project Structure
+
+```text
+Lung-disease-detection-and-classification-with-XAI-techniques/
+│
+├── Images/
+│   ├── accuracy_loss.png
+│   ├── feature_map.png
+│   ├── grad_cam.png
+│   ├── integrated_gradient.png
+│   ├── lime.png
+│   ├── lrp_heatmap.png
+│   ├── lung_dataset.png
+│   └── predicted_class.png
+│
+├── main.ipynb
+├── README.md
+└── requirements.txt
+```
+
+---
 
 
-📌 **Grad-CAM (Gradient-weighted Class Activation Mapping)**
-*Highlights the spatial regions in an image that influenced the model’s decision the most.*
 
-📌 **LIME (Local Interpretable Model-Agnostic Explanations)**
-*Explains individual predictions by approximating the model locally with an interpretable model (e.g., linear model).*
+# 👩‍💻 Author
 
-📌 **Integrated Gradients**
-*A gradient-based method that attributes a prediction to each input feature by integrating the gradients along the path from a baseline to the input. It produces precise pixel-level attribution maps.*
+**Riya S Menon**
 
-📌 **Layer-wise Relevance Propagation (LRP)**
-*Propagates the prediction backward through the network, distributing relevance scores to each neuron and input feature.*
-
-📌 **Decision Tree Interpretation**
-*A simple, interpretable decision tree is used:*
-
-* *As a surrogate to approximate CNN behavior in a human-readable format,*
-* *Or to classify features extracted from intermediate CNN layers.*
-
-📌 **Feature Map Visualization (Layer Outputs)**
-*Helps interpret how the network processes and transforms input images layer by layer, offering insight into what the model "sees" at different depths.*
-
+**B.Tech Computer Science and Engineering (Artificial Intelligence & Machine Learning)**
