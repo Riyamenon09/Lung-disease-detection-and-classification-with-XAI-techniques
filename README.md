@@ -1,7 +1,5 @@
 # 🫁 Lung Disease Detection and Classification using Deep Learning with Explainable AI (XAI)
 
-> A Deep Learning-based diagnostic system that classifies chest X-ray images into **COVID-19**, **Pneumonia**, and **Normal** categories using a fine-tuned **VGG19** model, integrated with multiple **Explainable AI (XAI)** techniques for transparent and trustworthy predictions.
-
 ---
 
 ## 📖 Project Overview
